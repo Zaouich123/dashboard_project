@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
@@ -42,7 +43,7 @@ class CPUActivity : AppCompatActivity() {
     private fun updateCpuData() {
         val cpuUsage = cpuDataCollector.getCpuUsagePercentage()
         ChartUtils.addEntryToChart(cpuChart, cpuUsage)
-
+        Log.d("CPUActivity", "CPU Usage: $cpuUsage%")
         // Animation au refresh
 
     }
